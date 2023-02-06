@@ -1,0 +1,16 @@
+name: "Hello world workflow'
+
+on:
+  workflow_dispatch;
+  
+  jobs:
+    print_hello_world;
+    name: hello world!
+    rum-on: ubuntu-latest 
+    
+    steps:
+      - name: Hello world!
+      run: echo 'Hello world'
+  print_hello_world_2:
+    name: Hello world 2!
+    run: echo 'Hello world'
