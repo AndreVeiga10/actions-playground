@@ -35,7 +35,7 @@ jobs:
       - print_hello_world_ubuntu
       - print_hello_world_windows
       - print_hello_world_macos
-      
+    
     steps:
       - name: Hello date final!
         run: 'date'
