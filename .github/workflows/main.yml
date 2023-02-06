@@ -1,16 +1,32 @@
-name: "Hello world workflow'
+name: "Hello world workflow"
 
 on:
-  workflow_dispatch;
+  push:
   
-  jobs:
-    print_hello_world;
-    name: hello world!
-    rum-on: ubuntu-latest 
+jobs:
+  print_hello_world_ubuntu:
+    name: Hello world Ubuntu!
+    runs-on: ubuntu-latest
     
     steps:
-      - name: Hello world!
-      run: echo 'Hello world'
-  print_hello_world_2:
-    name: Hello world 2!
-    run: echo 'Hello world'
+      - name: Hello world Ubuntu!
+        run: echo 'Hello world'
+        
+  print_hello_world_windows:
+    name: Hello world Windows!
+    runs-on: windows-latest
+    
+    steps:
+      - name: Hello world Windows!
+        run: echo 'Hello world'
+        
+  print_hello_world_macos:
+    name: Hello world MacOS!
+    runs-on: macos-latest
+    needs:
+      - print_hello_world_ubuntu
+      - print_hello_world_windows
+    
+    steps:
+      - name: Hello world MacOS!
+        run: echo 'Hello world MacOS!'
