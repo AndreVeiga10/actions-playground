@@ -4,6 +4,7 @@ on:
   push:
   
 jobs:
+
   print_hello_world_ubuntu:
     name: Hello world Ubuntu!
     runs-on: ubuntu-latest
