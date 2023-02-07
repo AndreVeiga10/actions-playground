@@ -1,0 +1,12 @@
+name: "Execercicio 2"
+
+on: [push]
+  
+jobs:
+  cria_e_upload_artefato:
+    name: "cria arqtefafo e fas upload"
+    runs-on: unbuntu-latest
+    
+    steps:
+      - name: Checkout repository 
+        uses: actions/checkout@v3.3.0
